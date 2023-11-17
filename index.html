@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortener</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #shorten-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #shorten-input {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #shorten-button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+        }
+
+        #shortened-link {
+            margin-top: 20px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div id="shorten-container">
+        <h1>Link Shortener</h1>
+        <input type="url" id="shorten-input" placeholder="Enter your URL">
+        <button id="shorten-button" onclick="shortenUrl()">Shorten</button>
+        <div id="shortened-link"></div>
+    </div>
+
+    <script>
+        function shortenUrl() {
+            const originalUrl = document.getElementById('shorten-input').value;
+            // Here you would typically make a request to the server to generate the short URL
+            // and then update the #shortened-link element with the result.
+            // For simplicity, we'll just display the original URL in this example.
+            document.getElementById('shortened-link').innerText = originalUrl;
+        }
+    </script>
+</body>
+</html>
